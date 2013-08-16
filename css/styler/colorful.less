@@ -1,0 +1,189 @@
+@import "elements.less";
+
+@orange : #f05444;
+@bright-orange : #ea9431;
+@blue : #06a9ef;
+@dark-grey: #333;
+@grey : #888;
+@pink : #d8335b;
+@green : #4fa950;
+@yellow : #FFA93C;
+@red : #ce483d;
+@light-grey : #f5f5f5;
+@darker-bg : rgba(0,0,0,0.1);
+@black: #000;
+@silver: #bdc3c7;
+
+/*-------------------------------------------------------------------------*/
+/* 01. Background Color */
+/*-------------------------------------------------------------------------*/
+.bg-color {
+	h1, h2, h3, h4, h5, h6 {color:#fff;}
+	p {color:rgba(255,255,255,0.8);}
+	a {color:rgba(255,255,255,0.8);}
+	&.orange 		{background: @orange; color: #fff;}
+	&.green 		{background: @green; color: #fff;}
+	&.blue			{background: @blue; color: #fff;}
+	&.dark-grey 	{background: @dark-grey; color: #fff;}
+	&.grey			{background: @grey; color: #fff;}
+	&.yellow		{background: @yellow; color: #fff;}
+	&.pink			{background: @pink; color: #fff;}
+	&.black			{background: @black; color: #fff;}
+	&.red			{background: @red; color: #fff;}
+	&.darker-bg		{background: @darker-bg; color: #fff;}
+	&.silver		{background: @silver; color: #fff;}
+	&.light-grey {
+		background: @light-grey;
+		p {color: #666;}
+		h1, h2, h3, h4, h5, h6 {color:#333;}
+	}
+
+	.hero-unit {
+		h1 {color: #fff}
+		p.lead {color: rgba(255,255,255,0.8)}
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/* 02. Button */
+/*-------------------------------------------------------------------------*/
+.btn {
+	&.btn-flat {
+		border:none;
+		box-shadow: none;
+		color:#fff;
+		text-shadow:none;
+		padding:10px 20px;
+		font-weight: normal;
+		border-radius: 3px;
+		background: rgba(0,0,0,0.3);
+		&:hover {background: rgba(0,0,0,0.6)}
+
+		-webkit-transition: All 0.5s ease;
+		-moz-transition: All 0.5s ease;
+		-o-transition: All 0.5s ease;
+		-ms-transition: All 0.5s ease;
+		transition: All 0.5s ease;
+
+		&.bordered {
+			border:rgba(0,0,0,0.1) solid 1px;
+			box-shadow: inset rgba(255,255,255,0.1) 0 1px 0;
+		}
+		&.btn-orange {
+			background: @orange;
+			&:hover {
+				background: darken(@orange, 15%);
+			}
+		}
+		&.btn-bright-orange {
+			background: @bright-orange;
+			&:hover {
+				background: darken(@bright-orange, 15%);
+			}
+		}
+		&.btn-blue {
+			background: @blue;
+			&:hover {
+				background: darken(@blue, 15%);
+			}
+		}
+		&.btn-green {
+			background: @green;
+			&:hover {
+				background: darken(@green, 15%);
+			}
+		}
+		&.btn-yellow {
+			background: @yellow;
+			&:hover {
+				background: darken(@yellow, 15%);
+			}
+		}
+		&.btn-pink {
+			background: @pink;
+			&:hover {
+				background: darken(@pink, 15%);
+			}
+		}
+		&.btn-red {
+			background: @red;
+			&:hover {
+				background: darken(@red, 15%);
+			}
+		}
+		&.btn-bg-darker {
+			background: rgba(0,0,0,0.4);
+			&:hover {
+				background: rgba(0,0,0,0.6)
+			}
+		}
+		&.btn-dark-grey {
+			background: @dark-grey;
+			&:hover {
+				background: darken(@dark-grey, 15%);
+			}
+		}
+		&.btn-large {
+			padding:15px 40px;
+			border-radius: 5px;
+		}
+		&.btn-small {
+			font-size: 12px;
+			padding:5px 15px;
+			letter-spacing: 1px;
+		}
+		
+	}
+}
+
+/*-------------------------------------------------------------------------*/
+/* 03. CTA (Call to Action) */
+/*-------------------------------------------------------------------------*/
+.cta {
+	background: rgba(0,0,0,0.05);
+	border-radius: 5px;
+	padding:30px 50px;
+	position: relative;
+}
+
+/*-------------------------------------------------------------------------*/
+/* 04. Icons*/
+/*-------------------------------------------------------------------------*/
+.icons {
+	height: 100px;
+	width:100px;
+	margin:0 auto;
+	i {
+		font-size: 36px; 
+		line-height: 100px;
+		color: rgba(0,0,0,0.4);
+	}
+	&.round {border-radius: 100px;}
+	&.rounded-rectangle {border-radius: 5px;}
+	&.small {
+		width: 70px;
+		height:70px;
+		i {
+			font-size: 28px;
+			line-height: 70px;
+		}
+	}
+
+	&.icons-colored {
+		&.yellow {
+			background: #ffd24d;
+		}
+		&.green {
+			background: #9fc300;
+		}
+		&.blue {
+			background: #41d5ff;
+		}
+		&.red {
+			background: #e0594b;
+		}
+		&.bg-color {
+			background: rgba(0,0,0,0.1);
+		}
+	}
+}
