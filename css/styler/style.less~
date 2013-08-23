@@ -84,7 +84,7 @@ body {
 	}
 
 	.navbar {
-		border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
+		box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .3);
 
 		.navbar-inner {
 			background: #fff;

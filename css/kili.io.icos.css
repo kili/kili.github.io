@@ -33,6 +33,6 @@
   line-height: 1em;
 }
 .icon-globe:before { content: '\e801'; } /* 'î ' */
-.icon-dollar:before { content: '\e803'; } /* 'î ' */
+.icon-usd:before { content: '\e803'; } /* 'î ' */
 .icon-user:before { content: '\e800'; } /* 'î ' */
 .icon-key:before { content: '\e802'; } /* 'î ' */
