@@ -251,7 +251,6 @@
 }
 a {
   color: #1492d6;
-  cursor:pointer;
 }
 a:hover {
   color: #0e6999;
@@ -371,6 +370,7 @@ body .navbar .navbar-inner ul.nav li a {
   font-weight: 600;
   text-transform: uppercase;
   text-shadow: none;
+  cursor:pointer;
 }
 body .navbar .navbar-inner ul.nav li a:hover {
   text-decoration: underline;
