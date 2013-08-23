@@ -251,6 +251,7 @@
 }
 a {
   color: #1492d6;
+  cursor:pointer;
 }
 a:hover {
   color: #0e6999;
