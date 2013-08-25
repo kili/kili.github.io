@@ -364,6 +364,7 @@ body .navbar .navbar-inner #branding {
 }
 body .navbar .navbar-inner ul.nav {
   margin-bottom: 0;
+  margin-right:100px;
 }
 body .navbar .navbar-inner ul.nav li a {
   color: #333;
@@ -378,6 +379,7 @@ body .navbar .navbar-inner ul.nav li a:hover {
 body > footer {
   padding: 30px 0;
 }
+
 body > footer ul.nav {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.7);

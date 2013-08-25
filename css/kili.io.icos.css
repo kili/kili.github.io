@@ -36,3 +36,25 @@
 .icon-usd:before { content: '\e803'; } /* 'î ' */
 .icon-user:before { content: '\e800'; } /* 'î ' */
 .icon-key:before { content: '\e802'; } /* 'î ' */
+
+.hint{
+	padding:3px;
+	position:fixed;
+	bottom:0;
+	text-align:center;
+	width:100%;
+}
+  
+#pricingnav > div{
+	position:absolute;
+	overflow:hidden;
+	height:0 !important;
+	margin:3px 15px;
+	transition:height .5s ease;
+}
+
+#pricingnav:hover > div{height: 300px !important;}
+.step{min-width:600px !important;}
+.impnavbtn{text-align:center;margin:10px 0;}
+
+#intro,#pricing{text-align:center}
