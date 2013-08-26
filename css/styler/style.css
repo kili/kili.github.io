@@ -495,6 +495,7 @@ body > footer ul.nav {
   background: #fff;
   border-radius: 3px;
   color: #555;
+  margin-bottom: 20px;
 }
 .pricing ul.pricing-list.pricing1 > li .pricing-title {
   padding: 10px 20px;
