@@ -58,3 +58,5 @@
 .impnavbtn{text-align:center;margin:10px 0;}
 
 #intro,#pricing{text-align:center}
+
+.less-error-message{z-index:1000000;position:absolute;}

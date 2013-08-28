@@ -84,7 +84,10 @@ body {
 	}
 
 	.navbar {
-		border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
+        -o-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
 
 		.navbar-inner {
 			background: #fff;
@@ -100,6 +103,7 @@ body {
 
 			ul.nav {
 				margin-bottom: 0;
+                margin-right:100px;
 				li {
 					a {
 						color: #333;
