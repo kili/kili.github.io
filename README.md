@@ -1,5 +1,4 @@
-Kili.io
+Kili.io impress remix
 ==============
 
-Initial Kili.io website mod with animated scrolling and working LESS.js
-
+This branch uses https://github.com/bartaz/impress.js/ for 3D effects and fully implements LESS
