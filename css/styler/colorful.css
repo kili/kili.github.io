@@ -1,0 +1,226 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+/* 01. Background Color */
+/*-------------------------------------------------------------------------*/
+.bg-color h1,
+.bg-color h2,
+.bg-color h3,
+.bg-color h4,
+.bg-color h5,
+.bg-color h6 {
+  color: #fff;
+}
+.bg-color p {
+  color: rgba(255, 255, 255, 0.8);
+}
+.bg-color a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.bg-color.orange {
+  background: #f05444;
+  color: #fff;
+}
+.bg-color.green {
+  background: #4fa950;
+  color: #fff;
+}
+.bg-color.blue {
+  background: #06a9ef;
+  color: #fff;
+}
+.bg-color.dark-grey {
+  background: #333333;
+  color: #fff;
+}
+.bg-color.grey {
+  background: #888888;
+  color: #fff;
+}
+.bg-color.yellow {
+  background: #ffa93c;
+  color: #fff;
+}
+.bg-color.pink {
+  background: #d8335b;
+  color: #fff;
+}
+.bg-color.black {
+  background: #000000;
+  color: #fff;
+}
+.bg-color.red {
+  background: #ce483d;
+  color: #fff;
+}
+.bg-color.darker-bg {
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.bg-color.silver {
+  background: #bdc3c7;
+  color: #fff;
+}
+.bg-color.light-grey {
+  background: #f5f5f5;
+}
+.bg-color.light-grey p {
+  color: #666;
+}
+.bg-color.light-grey h1,
+.bg-color.light-grey h2,
+.bg-color.light-grey h3,
+.bg-color.light-grey h4,
+.bg-color.light-grey h5,
+.bg-color.light-grey h6 {
+  color: #333;
+}
+.bg-color .hero-unit h1 {
+  color: #ffffff;
+}
+.bg-color .hero-unit p.lead {
+  color: rgba(255, 255, 255, 0.8);
+}
+/*-------------------------------------------------------------------------*/
+/* 02. Button */
+/*-------------------------------------------------------------------------*/
+.btn.btn-flat {
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  text-shadow: none;
+  padding: 10px 20px;
+  font-weight: normal;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: All 0.5s ease;
+  -moz-transition: All 0.5s ease;
+  -o-transition: All 0.5s ease;
+  -ms-transition: All 0.5s ease;
+  transition: All 0.5s ease;
+}
+.btn.btn-flat:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.btn.btn-flat.bordered {
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+  box-shadow: inset rgba(255, 255, 255, 0.1) 0 1px 0;
+}
+.btn.btn-flat.btn-orange {
+  background: #f05444;
+}
+.btn.btn-flat.btn-orange:hover {
+  background: #d62411;
+}
+.btn.btn-flat.btn-bright-orange {
+  background: #ea9431;
+}
+.btn.btn-flat.btn-bright-orange:hover {
+  background: #bb6d13;
+}
+.btn.btn-flat.btn-blue {
+  background: #06a9ef;
+}
+.btn.btn-flat.btn-blue:hover {
+  background: #0474a4;
+}
+.btn.btn-flat.btn-green {
+  background: #4fa950;
+}
+.btn.btn-flat.btn-green:hover {
+  background: #377537;
+}
+.btn.btn-flat.btn-yellow {
+  background: #ffa93c;
+}
+.btn.btn-flat.btn-yellow:hover {
+  background: #ef8500;
+}
+.btn.btn-flat.btn-pink {
+  background: #d8335b;
+}
+.btn.btn-flat.btn-pink:hover {
+  background: #a01f3e;
+}
+.btn.btn-flat.btn-red {
+  background: #ce483d;
+}
+.btn.btn-flat.btn-red:hover {
+  background: #982f26;
+}
+.btn.btn-flat.btn-bg-darker {
+  background: rgba(0, 0, 0, 0.4);
+}
+.btn.btn-flat.btn-bg-darker:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.btn.btn-flat.btn-dark-grey {
+  background: #333333;
+}
+.btn.btn-flat.btn-dark-grey:hover {
+  background: #0d0d0d;
+}
+.btn.btn-flat.btn-large {
+  padding: 15px 40px;
+  border-radius: 5px;
+}
+.btn.btn-flat.btn-small {
+  font-size: 12px;
+  padding: 5px 15px;
+  letter-spacing: 1px;
+}
+/*-------------------------------------------------------------------------*/
+/* 03. CTA (Call to Action) */
+/*-------------------------------------------------------------------------*/
+.cta {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 30px 50px;
+  position: relative;
+}
+/*-------------------------------------------------------------------------*/
+/* 04. Icons*/
+/*-------------------------------------------------------------------------*/
+.icons {
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+}
+.icons i {
+  font-size: 36px;
+  line-height: 100px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.icons.round {
+  border-radius: 100px;
+}
+.icons.rounded-rectangle {
+  border-radius: 5px;
+}
+.icons.small {
+  width: 70px;
+  height: 70px;
+}
+.icons.small i {
+  font-size: 28px;
+  line-height: 70px;
+}
+.icons.icons-colored.yellow {
+  background: #ffd24d;
+}
+.icons.icons-colored.green {
+  background: #9fc300;
+}
+.icons.icons-colored.blue {
+  background: #41d5ff;
+}
+.icons.icons-colored.red {
+  background: #e0594b;
+}
+.icons.icons-colored.bg-color {
+  background: rgba(0, 0, 0, 0.1);
+}

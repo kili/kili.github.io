@@ -2,10 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-
 		<title>Kili - Cloud Infrastructure for Kenya</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Kili provides AWS and OpenStack-API compatible cloud infrastructure for East African web and mobile apps">
 
 		<!-- Custom Fonts -->
@@ -14,16 +12,17 @@
 		<link href="//fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
 
 		<!-- styles -->
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-        <link href="css/kili.io.icos.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+		<link href="css/kili.io.icos.css" rel="stylesheet">
+        <link rel="stylesheet/less" type="text/css" href="css/styler/style.less" rel="stylesheet">
 	    <!-- START COPYING HERE -->
-        <link rel="stylesheet/less" type="text/css" href="css/style.less" rel="stylesheet">
-        <link rel="stylesheet" href="css/gh-fork-ribbon.css" />
+	    <link rel="stylesheet" href="css/styler/gh-fork-ribbon.css" />
 	    <!--[if IE]>
-	        <link rel="stylesheet" href="css/gh-fork-ribbon.ie.css" />
+	        <link rel="stylesheet" href="gh-fork-ribbon.ie.css" />
 	    <![endif]-->
 	    <!-- END COPYING HERE -->
         <script src="js/less-1.4.1.min.js" type="text/javascript"></script>
+        <script src="js/jay-es.js" type="text/javascript"></script>
 	</head>
 	<body>
 	    <!-- TOP RIGHT RIBBON: START COPYING HERE -->
@@ -33,333 +32,465 @@
 	    </div>
 	</div>
 	<!-- TOP RIGHT RIBBON: END COPYING HERE -->
-    <header class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1 id="branding" class="pull-left">
-                    <a style="color: #3E4956;" href="/">Kili</a>
-                </h1>
-                <div class="nav-collapse collapse pull-right">
-                    <ul class="nav">
-                        <li>
-                            <a href="#features">Features</a>
-                        </li>
-                        <!--
-                        <li>
-                            <a href="#steps">Steps</a>
-                        </li>
-                        -->
-                        <li id=pricingnav>
-                            <a href="#pricing">Plans &amp; Pricing</a>
-                            <div>
-                                <a href="#pricemicro">Micro</a><br>
-                                <a href="#pricesmall">Small</a><br>
-                                <a href="#pricemedium">Medium</a><br>
-                                <a href="#pricelarge">Large</a><br>
-                                <a href="#pricehicpu">High CPU</a><br>
-                                <a href="#pricehiram">High RAM</a><br>
-                                <a href="#pricexl">XL</a><br>
-                                <a href="#pricesto">Storage</a><br>
-                            </div>
-                        </li> 
-                        <!--
-                        <li>
-                            <a href="#testimonial">Testimonial</a>
-                        </li>
-                        -->
-                        <li>
-                            <a href="#cta">BETA</a>
-                        </li>
-                    </ul>
-                </div><!--/.nav-collapse -->
-            </div>
-        </div>
-    </header>
-    <div id="impress">
-        <section id=intro class=step data-x=0 data-y=0 >
-            <h1>Welcome to Kili</h1>
-            <p class="lead">
-                We supply local (thus low latency) cloud computing Infrastructure for (Kenya/East Africa) that's API-compatible with Amazon and OpenStack.</br>
-                <div align=center><a href=#features class="btn btn-flat btn-orange btn-large uppercase">Checkout our feature list</a></div>
-            </p>
-        </section>
-        <section id=features    class=step data-x=0 data-y=1500 >
-            <h1>Create the <span>happiest customers</span> on earth</h1>
-            <p class="lead">Our cloud infrastructure, located at the best data centers in Kenya, lets your end users experience your app the way they were meant to be - fast.</p>
-            <div class="container">
-                <div class="row">
-                    <ul class="features features-list1 clearfix unstyled">
-                        <li class="span6">
-                            <div class="icons pull-left">
-                                <i class="icon-globe"></i>
-                            </div>
-                            <div class="content">
-                                <h3>User Data sits near the user</h3>
-                                <p>When a user visits your app hosted in Germany,
-                                those packets are going all the way to Europe and
-                                back - adding seconds to load time.  Keeping
-                                the data local means everything is faster.</p>
-                            </div>
-                        </li>
-                        <li class="span6">
-                            <div class="icons pull-left">
-                                <i class="icon-user"></i>
-                            </div>
-                            <div class="content">
-                                <h3>It's Faster for You Too!</h3>
-                                <p>FTP taking forever? SSH lagging for every key
-                                you press? We can take care of that for you as an
-                                added bonus - it's one more benefit of the local
-                                cloud.</p>
-                            </div>
-                        </li>
-                        <li class="span6">
-                            <div class="icons pull-left">
-                                <i class="icon-key"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Focus on App Security</h3>
-                                <p>Our team is laser-focused on physical and 
-                                network security so that you can spend more time
-                                hardening your app. We don't have access to your
-                                OS and that's the way we like it.</p>
-                            </div>
-                        </li>
-                        <li class="span6">
-                            <div class="icons pull-left">
-                                <i class="icon-usd"></i>
-                            </div>
-                            <div class="content">
-                                <h3>Save Significant Money</h3>
-                                <p>When considering 
-                                the total cost of ownership, including time spent 
-                                managing physical infrastructure, you're spending alot. Also, you won't need to 
-                                spend cash upfront for servers. Scale up and down while
-                                paying only for what you use.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div align=center><a href=#pricing class="btn btn-flat btn-orange btn-large uppercase">what about pricing?</a></div>
-        </section>
-        <section id=pricing     class=step data-x=0 data-y=3000 >
-            <h1>Our pricing allows you to spin up massive capacity without the fixed costs</h1>
-            <p class="lead">Our cloud infrastructure allows you to pay for what you use, not what you think you might use.</p>
-            <div align=center><a href=#pricemicro class="btn btn-flat btn-orange btn-large uppercase">take a look &rarr;</a></div>
-        </section>
-        <section id=pricemicro class="span3 aligncenter step" data-x=1000 data-y=3000 data-rotate-y=55 data-scale=1 data-z=-4 >
-            <div class="pricing-title">
-                <h3 class="light">Micro</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.02<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>1</b> CPU</li>
-                <li><b>615MB</b> RAM</li>
-                <li><b>$62 </b>plus<b> $0.008/hr</b> for 1 year</li>
-                <li><b>$100 </b>plus<b> $0.008/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricesmall  class="span3 aligncenter step" data-x=2000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">Small</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.07<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>1</b> CPU</li>
-                <li><b>1.7GB</b> RAM</li>
-                <li><b>$169 </b>plus<b> $0.022/hr</b> for 1 year</li>
-                <li><b>$257 </b>plus<b> $0.018/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricemedium class="span3 aligncenter step" data-x=3000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">Medium</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.13<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>1</b> CPU</li>
-                <li><b>3.75GB</b> RAM</li>
-                <li><b>$338 </b>plus<b> $0.044/hr</b> for 1 year</li>
-                <li><b>$514 </b>plus<b> $0.035/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricehicpu  class="span3 aligncenter step" data-x=4000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">High CPU</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.17<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>2</b> CPU</li>
-                <li><b>1.7GB</b> RAM</li>
-                <li><b>$450 </b>plus<b> $0.057/hr</b> for 1 year</li>
-                <li><b>$701 </b>plus<b> $0.049/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricelarge  class="span3 aligncenter step" data-x=5000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">Large</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.26<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>2</b> CPU</li>
-                <li><b>7.5GB</b> RAM</li>
-                <li><b>$676 </b>plus<b> $0.087/hr</b> for 1 year</li>
-                <li><b>$1,028 </b>plus<b> $0.070/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricehiram  class="span3 aligncenter step" data-x=6000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">High RAM</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.46<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>2</b> CPU</li>
-                <li><b>17.1GB</b> RAM</li>
-                <li><b>$789 </b>plus<b> $0.102/hr</b> for 1 year</li>
-                <li><b>$1,198 </b>plus<b> $0.083/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricexl     class="span3 aligncenter step" data-x=7000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">XL</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    $0.55<span>/hr</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>4</b> CPU</li>
-                <li><b>15GB</b> RAM</li>
-                <li><b>$1,480 </b>plus<b> $0.189/hr</b> for 1 year</li>
-                <li><b>$2,261 </b>plus<b> $0.153/hr</b> for 3 year</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">moar! &rarr;</a></div>
-        </section>
-        <section id=pricesto    class="span3 aligncenter step" data-x=8000 data-y=3000 data-rotate-y=55 data-scale=1>
-            <div class="pricing-title">
-                <h3 class="light">Storage</h3>
-            </div>
-            <div class="pricing-price">
-                <div class="pricing-price-container bg-color dark-grey">
-                    8&cent;<span>/GB/month</span>
-                </div>
-            </div>
-            <ul class="pricing-features unstyled">
-                <li><b>$0.120</b>/GB OUT</li>
-                <li><b>$0.005</b> per thousand requests</li>
-                <li><b>DELETE</b> requests free</li>
-                <li>Data transferred <b>IN</b> free</li>
-            </ul>
-            <div class="pricing-action">
-                <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
-            </div>
-            <div class=impnavbtn><a onclick=impress().next(); class="btn btn-flat btn-orange btn-large uppercase">How do I start?</a></div>
-        </section>
-        <section id=cta  class="bg-color light-grey step"      data-x=4500 data-y=3500 data-rotate-x=-90 data-scale=10>
-            <div class="container">
-                <div class="row">
-                    <div class="span10 offset1">
-                        <div class="hero-unit aligncenter">
-                            <h2 class="normal">Ready to get started using Kili?</h2>
-                            <p class="big">We're giving people access to the initial beta! Let us know that you're interested and we'll get you started.</p>
-                            <a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-orange uppercase">Sign Up for the Beta</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer class="bg-color dark-grey">
-                <div class="container">
-                    <div class="row">
-                        <div class="span6">&copy; 2013 Kili</div>
-                        <div class="span6 alignright">
-                            <ul class="nav nav-pills pull-right">
-                                <!--
-                                <li>
-                                    <a href="#">Features</a>
-                                </li>
-                                <li>
-                                    <a href="#">Plans &amp; Pricing</a>
-                                </li> 
-                                <li>
-                                    <a href="#">Blog</a>
-                                </li>
-                                -->
-                                <li>
-                                    <a href="http://angel.co/kili-io" target=_blank>About</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </section>        
-    </div>
-    <footer class="hint">
-        <p>Hint: Use the spacebar or arrow keys to navigate</p>
-    </footer>
-    <script>
-    if ("ontouchstart" in document.documentElement)
-        document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-    </script>
-    <script src="js/impress.js"></script>
-    <script>impress().init();</script>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<h1 id="branding" class="pull-left">
+						<a style="color: #3E4956;" href="/">Kili</a>
+					</h1>
+					<div class="nav-collapse collapse pull-right">
+						<ul class="nav">
+							<li>
+								<a onclick=scrollToA(el('features'))>Features</a>
+							</li>
+							<li>
+								<a onclick=scrollToA(el('pricing'))>Plans &amp; Pricing</a>
+							</li> 
+							<li>
+								<a onclick=scrollToA(el('cta'))>BETA</a>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+	    </div>
+		<section id="headline" class="featured bg-color silver">
+			<div class="container">
+				<div class="row">
+					<div class="intro span8 offset2 aligncenter">
+						<h1>Local Cloud Compute and Storage Infrastructure for Kenya</h1>
+						<p class="lead">
+							Low latency compute and storage infrastructure that's API-compatible 
+							with Amazon and OpenStack.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span12 aligncenter">
+						<img src="img/styler/dummy/featured.png">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="cta bg-color dark-grey">
+			<div class="container">
+				<div class="row">
+					<div class="span10 offset1">
+						<div class="hero-unit aligncenter">
+							<h1>Create the <span>happiest customers</span> 
+							on earth</h1>
+							<p class="lead">Our cloud infrastructure, located at 
+							the best data centers in Kenya, lets your end users
+							experience your app the way they were meant to be - fast.</p>
+							<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-orange btn-large uppercase">Signup for our Beta</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="features">
+			<div class="container">
+				<div class="row">
+					<ul class="features features-list1 clearfix unstyled">
+						<li class="span6">
+							<div class="icons pull-left">
+								<i class="icon-globe"></i>
+							</div>
+							<div class="content">
+								<h3>User Data sits near the user</h3>
+								<p>When a user visits your app hosted in Germany,
+								those packets are going all the way to Europe and
+								back - adding seconds to load time.  Keeping
+								the data local means everything is faster.</p>
+							</div>
+						</li>
+						<li class="span6">
+							<div class="icons pull-left">
+								<i class="icon-user"></i>
+							</div>
+							<div class="content">
+								<h3>It's Faster for You Too!</h3>
+								<p>FTP taking forever? SSH lagging for every key
+								you press? We can take care of that for you as an
+								added bonus - it's one more benefit of the local
+								cloud.</p>
+							</div>
+						</li>
+						<li class="span6">
+							<div class="icons pull-left">
+								<i class="icon-key"></i>
+							</div>
+							<div class="content">
+								<h3>Focus on App Security</h3>
+								<p>Our team is laser-focused on physical and 
+								network security so that you can spend more time
+								hardening your app. We don't have access to your
+								OS and that's the way we like it.</p>
+							</div>
+						</li>
+						<li class="span6">
+							<div class="icons pull-left">
+								<i class="icon-usd"></i>
+							</div>
+							<div class="content">
+								<h3>Save Significant Money</h3>
+								<p>When considering 
+								the total cost of ownership, including time spent 
+								managing physical infrastructure, you're spending alot. Also, you won't need to 
+								spend cash upfront for servers. Scale up and down while
+								paying only for what you use.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="pricing" class="pricing bg-color grey">
+			<div class="container">
+				<div class="row">
+					<div class="hero-unit aligncenter">
+						<h1>Pricing allows you to spin up massive capacity without the fixed costs</h1>
+						<p class="lead">Our cloud infrastructure allows you to 
+						pay for what you use, not what you think you might use.</p>
+					</div>
+				</div>
+				<div class="row">
+					<ul class="pricing-list pricing1 unstyled clearfix">
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">Micro</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.02<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>1</b> CPU</li>
+								<li><b>615MB</b> RAM</li>
+								<li><b>$62 </b>plus<b> $0.008/hr</b> for 1 year</li>
+								<li><b>$100 </b>plus<b> $0.008/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">Small</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.07<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>1</b> CPU</li>
+								<li><b>1.7GB</b> RAM</li>
+								<li><b>$169 </b>plus<b> $0.022/hr</b> for 1 year</li>
+								<li><b>$257 </b>plus<b> $0.018/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">Medium</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.13<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>1</b> CPU</li>
+								<li><b>3.75GB</b> RAM</li>
+								<li><b>$338 </b>plus<b> $0.044/hr</b> for 1 year</li>
+								<li><b>$514 </b>plus<b> $0.035/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">High CPU</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.17<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>2</b> CPU</li>
+								<li><b>1.7GB</b> RAM</li>
+								<li><b>$450 </b>plus<b> $0.057/hr</b> for 1 year</li>
+								<li><b>$701 </b>plus<b> $0.049/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">Large</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.26<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>2</b> CPU</li>
+								<li><b>7.5GB</b> RAM</li>
+								<li><b>$676 </b>plus<b> $0.087/hr</b> for 1 year</li>
+								<li><b>$1,028 </b>plus<b> $0.070/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">High RAM</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.46<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>2</b> CPU</li>
+								<li><b>17.1GB</b> RAM</li>
+								<li><b>$789 </b>plus<b> $0.102/hr</b> for 1 year</li>
+								<li><b>$1,198 </b>plus<b> $0.083/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">XL</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									$0.55<span>/hr</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>4</b> CPU</li>
+								<li><b>15GB</b> RAM</li>
+								<li><b>$1,480 </b>plus<b> $0.189/hr</b> for 1 year</li>
+								<li><b>$2,261 </b>plus<b> $0.153/hr</b> for 3 year</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+						<li class="span3 aligncenter">
+							<div class="pricing-title">
+								<h3 class="light">Storage</h3>
+							</div>
+							<div class="pricing-price">
+								<div class="pricing-price-container bg-color dark-grey">
+									8&cent;<span>/GB/month</span>
+								</div>
+							</div>
+							<ul class="pricing-features unstyled">
+								<li><b>$0.120</b>/GB OUT</li>
+								<li><b>$0.005</b> per thousand requests</li>
+								<li><b>DELETE</b> requests free</li>
+								<li>Data transferred <b>IN</b> free</li>
+							</ul>
+							<div class="pricing-action">
+								<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-small btn-blue uppercase">BETA</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+<!--
+		<section id='testimonial' class="testimonial bg-color dark-grey">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<div class="hero-unit aligncenter">
+							<h1 class="normal">Our happy customers said..</h1>
+							<p class="lead">Fingerstache authentic forage blue bottle odio cliche irure flannel retro. Minim forage mustache, consequat mollit nisi seitan biodiesel laboris assumenda esse.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span12">
+						<div id="testimonial-slider" class="carousel slide testimonial testimonial-list2">
+							<ul class="carousel-indicators aligncenter row-fluid">
+								<li data-target="#testimonial-slider" data-slide-to="0" class="active span3">
+									<div class="thumbnail"><img src="http://dribbble.s3.amazonaws.com/users/14457/avatars/original/wfx_rasta.jpg?1305134813"></div>
+									<div class="desc">
+										<h5 class="name">Wafiq Rodzuan</h5>
+										<p class="title">Senior Visual Practitioner</p>
+									</div>
+									<div class="triangle green"></div>
+								</li>
+								<li data-target="#testimonial-slider" data-slide-to="1" class="span3">
+									<div class="thumbnail"><img src="http://dribbble.s3.amazonaws.com/users/56098/avatars/original/393847_2683298493239_1579654026_2361191_1422997516_n.jpeg?1330088797"></div>
+									<div class="desc">
+										<h5 class="name">Syazwan Zahari</h5>
+										<p class="title">Lead UI Champion</p>
+									</div>
+									<div class="triangle yellow"></div>
+								</li>
+								<li data-target="#testimonial-slider" data-slide-to="2" class="span3">
+									<div class="thumbnail"><img src="http://dribbble.s3.amazonaws.com/users/110829/avatars/small/4411226_300.jpg?1354939599"></div>
+									<div class="desc">
+										<h5 class="name">Ajmal Afif</h5>
+										<p class="title">Senior UX Ninja</p>
+									</div>
+									<div class="triangle blue"></div>
+								</li>
+								<li data-target="#testimonial-slider" data-slide-to="3" class="span3">
+									<div class="thumbnail"><img src="http://dribbble.s3.amazonaws.com/users/16168/avatars/original/heh.jpg?1305136272"></div>
+									<div class="desc">
+										<h5 class="name">Syahmi Ismail</h5>
+										<p class="title">Black Belt Designer</p>
+									</div>
+									<div class="triangle orange"></div>
+								</li>
+							</ul>
+							<div class="carousel-inner clearfix">
+								<div class="active item clearfix">
+									<div class="row-fluid clearfix">
+										<div class="span12">
+											<blockquote class="big bg-color green">Do tonx sunt assumenda, consequat fingerstache minim single-origin coffee pariatur street art pickled cillum. Truffaut cupidatat keytar scenester readymade.</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row-fluid clearfix">
+										<div class="span12">
+											<blockquote class="bg-color yellow">Flannel actually selfies nostrud squid american apparel. Pop-up sapiente mcsweeney's ethical. Ea banjo terry richardson raw denim, DIY four loko hashtag culpa sriracha authentic. Incididunt high life gentrify, polaroid nesciunt nihil est nostrud. Banjo banksy vero seitan ethnic small batch, squid 3 wolf moon keffiyeh. Butcher sed id thundercats. Seitan reprehenderit veniam raw denim.</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row-fluid clearfix">
+										<div class="span12">
+											<blockquote class="bg-color blue">Tempor meh helvetica, trust fund typewriter before they sold out cillum art party hoodie squid letterpress incididunt proident nisi quinoa. Bicycle rights street art stumptown, next level retro locavore mcsweeney's small batch aliqua sustainable 90's aute readymade assumenda.</blockquote>
+										</div>
+									</div>
+								</div>
+								<div class="item">
+									<div class="row-fluid clearfix">
+										<div class="span12">
+											<blockquote class="bg-color orange">Flannel actually selfies nostrud squid american apparel. Pop-up sapiente mcsweeney's ethical. Ea banjo terry richardson raw denim, DIY four loko hashtag culpa sriracha authentic. Incididunt high life gentrify, polaroid nesciunt nihil est nostrud. Banjo banksy vero seitan ethnic small batch, squid 3 wolf moon keffiyeh. Butcher sed id thundercats. Seitan reprehenderit veniam raw denim.</blockquote>
+										</div>
+									</div>
+								</div>
+							</div>
+							<a class="carousel-control left" href="#testimonial-slider" data-slide="prev">&lsaquo;</a>
+							<a class="carousel-control right" href="#testimonial-slider" data-slide="next">&rsaquo;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonial">
+			<div class="container">
+				<div class="row">
+					<ul class="testimonial testimonial-list1 unstyled clearfix">
+						<li class="span4">
+							<blockquote>GoCardless takes away the uncomfortable conversations with our customers about money. With Direct Debits in place we can now focus on talking about our product.</blockquote>
+							<div class="desc">
+								<div class="thumbnail pull-left"><img src="http://dribbble.s3.amazonaws.com/users/13842/avatars/original/seasonably_small.jpeg?1314207891"></div>
+								<h5 class="name">Gaddafi Rusli</h5>
+								<p class="title">Senior Visual Practitioner</p>
+							</div>
+						</li>
+						<li class="span4">							
+							<blockquote>Twee et wolf, enim YOLO cliche nisi photo booth umami brooklyn officia. Lomo enim vinyl, quinoa small batch duis pariatur artisan voluptate skateboard.</blockquote>
+							<div class="desc">
+								<div class="thumbnail pull-left"><img src="http://dribbble.s3.amazonaws.com/users/17863/avatars/original/avatar.jpg?1334675537"></div>
+								<h5 class="name">Izuddin Helmi</h5>
+								<p class="title">Lead UI Champion</p>
+							</div>
+						</li>
+						<li class="span4">							
+							<blockquote>Do tonx sunt assumenda, consequat fingerstache minim single-origin coffee pariatur street art pickled cillum. Truffaut cupidatat keytar scenester readymade.</blockquote>
+							<div class="desc">
+								<div class="thumbnail pull-left"><img src="http://dribbble.s3.amazonaws.com/users/17980/avatars/original/fath.jpg?1338360336"></div>
+								<h5 class="name">Nur Fathihah</h5>
+								<p class="title">Senior UX Ninja</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+-->
+		<section id="cta" class="bg-color light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="span10 offset1">
+						<div class="hero-unit aligncenter">
+							<h2 class="normal">Ready to get started using Kili?</h2>
+							<p class="big">We're giving people access to the initial beta! Let us know that you're interested and we'll get you started.</p>
+							<a href="https://docs.google.com/a/varud.com/forms/d/1FZvOryZ_0fRhx-q4PkHiUFX2_IPU7w3hFVLPy-vP478/viewform" class="btn btn-flat btn-orange uppercase">Sign Up for the Beta</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="bg-color dark-grey">
+			<div class="container">
+				<div class="row">
+					<div class="span6">
+						&copy; 2013 Kili
+					</div>
+					<div class="span6 alignright">
+						<ul class="nav nav-pills pull-right">
+							<!--
+							<li>
+								<a href="#">Features</a>
+							</li>
+							<li>
+								<a href="#">Plans &amp; Pricing</a>
+							</li> 
+							<li>
+								<a href="#">Blog</a>
+							</li>
+							-->
+							<li>
+								<a href="http://angel.co/kili-io">About</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('.carousel').carousel({
+					interval: false
+				});
+				$("[rel=tooltip]").tooltip();
+				$('.tabbable a').click(function (e) {
+				e.preventDefault();
+				$(this).tab('show');
+			});
+			});
+		</script>
 	</body>
 </html>
