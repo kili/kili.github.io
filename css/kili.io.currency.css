@@ -1,6 +1,0 @@
-[data-prinf] b{white-space:nowrap;}
-[data-currency="KES"] [data-prinf] b:before { content:"KES "; }
-[data-currency="KES"] a[title="swap currency"]:before { content:"USD" }
-[data-currency="USD"] [data-prinf] b:before { content:"$"; }
-[data-currency="USD"] a[title="swap currency"]:before { content:"KES" }
-[data-prinf] b:nth-child(2):after { content:"/hr"; }

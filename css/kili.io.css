@@ -1,3 +1,4 @@
+/* icons */
 @font-face {
   font-family: 'kili-io-icos';
   src: url('../font/kili-io-icos.eot?99288838');
@@ -36,3 +37,49 @@
 .icon-usd:before { content: '\e803'; } /* 'î ' */
 .icon-user:before { content: '\e800'; } /* 'î ' */
 .icon-key:before { content: '\e802'; } /* 'î ' */
+
+ul.pricing-list > li{ margin-bottom:10px; }
+
+#currSwitch { text-align: center; font-size:35px; }
+#currSwitch *{ display: inline-block; border-radius: 4px; vertical-align: middle; }
+#currSwitch b{ width: 225px; height: 46px; background: #333; text-align: left; }
+#currSwitch a{ 
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;  
+  color: #FFFFFF;
+  text-shadow: rgba(255,255,255,.6) 0 2px 0, rgba(170,170,170,.6) 0 -1px 1px;
+  background: #E6E6E6;
+  border:3px solid black;
+  font-size:65px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .5s ease;
+  //cursor:pointer;
+}
+
+#currSwitch a, #currSwitch a:focus{ 
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline-style:none;/*IE*/
+}
+
+#currSwitch a:hover{ background:#CCCCCC; }
+#currSwitch a:active{ cursor:; }
+
+
+/*currency styles*/
+[data-prinf] b{white-space:nowrap;}
+[data-currency="KES"] [data-prinf] b:before { content:"KES "; }
+[data-currency="KES"] a[title="swap currency"]:before { content:"USD" }
+[data-currency="KES"] #currSwitch a { cursor:e-resize; }
+[data-currency="USD"] [data-prinf] b:before { content:"$"; }
+[data-currency="USD"] a[title="swap currency"]:before { content:"KES" }
+[data-currency="USD"] #currSwitch a { cursor:w-resize; }
+[data-currency="USD"] #currSwitch a { margin-left: 120px; }
+[data-prinf] b:nth-child(2):after { content:"/hr"; }
+

@@ -1,6 +1,3 @@
-//for convenience
-function el(id){ return document.getElementById(id); }
-
 function findPos(obj) {
 	var l = t = 0;
 	if (obj.offsetParent) 
@@ -24,3 +21,23 @@ function scrollToA( target, duration ) {
 			clearInterval( interval );
 	}, 15);
 	return false;};
+
+var EXCHANGE_RATE = 86;
+ 
+function swapCurr(){
+    var USD = $("#pricing")[0].dataset.currency == "USD",
+        prices = $("[data-prinf] b");
+
+    for(var i = 0; i < prices.length; i++)
+        prices[i].innerHTML = ((USD?EXCHANGE_RATE:1/EXCHANGE_RATE)*parseFloat(prices[i].innerHTML.replace(/,/g,''))).formatMoney(2);   
+    
+    $("#pricing")[0].dataset.currency = USD?"KES":"USD";
+}
+
+Number.prototype.formatMoney = function(c, d, t){
+    var n = this, c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "." : d, 
+        t = t == undefined ? "," : t, s = n < 0 ? "-" : "",
+        i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
+    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");}
+
+$("#currSwitch > b > a").on("click", function(e){ swapCurr(); });
