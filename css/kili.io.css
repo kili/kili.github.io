@@ -38,54 +38,14 @@
 .icon-user:before { content: '\e800'; } /* 'î ' */
 .icon-key:before { content: '\e802'; } /* 'î ' */
 
-ul.pricing-list > li{ margin-bottom:10px; }
-
-#currSwitch { text-align: center; font-size:35px; }
-#currSwitch *{ display: inline-block; border-radius: 4px; vertical-align: middle; }
-#currSwitch b{ 
-  width: 100px; 
-  height: 62px; 
-  background: #EEE; 
-  text-align: left; 
-  border-radius: 60px; 
-  box-shadow: rgba(0,0,0,.6) 0 1px 2px inset;
-  border: 1px solid grey;
-}
-
-#currSwitch a{ 
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;  
-  color: #FFFFFF;
-  box-shadow:rgba(0,0,0,.2) 0 4px 5px;
-  border:1px solid rgba(0,0,0,.3);
-  background: white;
-  font-size:65px;
-  text-align: center;
-  text-decoration: none;
-  transition: all .5s ease;
-}
-
-#currSwitch a, #currSwitch a:focus{ 
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    outline-style:none;/*IE*/
-}
-
-#currSwitch a:active{ cursor:; }
+#currSwitch { text-align: center; font-size:35px; padding:0;}
+#currSwitch > *{ margin:0; }
 
 /*currency styles*/
 [data-prinf] b{white-space:nowrap;}
 [data-currency="KES"] [data-prinf] b:before { content:"KES "; }
 [data-currency="KES"] a[title="swap currency"]:before { content:"USD" }
-[data-currency="KES"] #currSwitch a { cursor:e-resize; }
 [data-currency="USD"] [data-prinf] b:before { content:"$"; }
 [data-currency="USD"] a[title="swap currency"]:before { content:"KES" }
-[data-currency="USD"] #currSwitch a { cursor:w-resize; }
-[data-currency="USD"] #currSwitch a { margin-left: 40px; }
 [data-prinf] b:nth-child(2):after { content:"/hr"; }
 
