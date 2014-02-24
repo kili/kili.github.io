@@ -1,9 +1,9 @@
 /* icons */
 @font-face {
   font-family: 'kili-io-icos';
-  src: url('../font/kili-io-icos.eot?99288838');
-  src: url('../font/kili-io-icos.eot?99288838#iefix') format('embedded-opentype'),
-       url('../font/kili-io-icos.svg?99288838#kili-io-icos') format('svg');
+  src: url('../../font/kili-io-icos.eot?99288838');
+  src: url('../../font/kili-io-icos.eot?99288838#iefix') format('embedded-opentype'),
+       url('../../font/kili-io-icos.svg?99288838#kili-io-icos') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,13 +39,11 @@
 .icon-key:before { content: '\e802'; } /* 'î ' */
 
 #currSwitch { text-align: center; font-size:35px; padding:0;}
-#currSwitch > *{ margin:0; }
+#currSwitch > *{ margin:0 auto; }
 
 /*currency styles*/
 [data-prinf] b{white-space:nowrap;}
 [data-currency="KES"] [data-prinf] b:before { content:"KES "; }
-[data-currency="KES"] a[title="swap currency"]:before { content:"USD" }
 [data-currency="USD"] [data-prinf] b:before { content:"$"; }
-[data-currency="USD"] a[title="swap currency"]:before { content:"KES" }
 [data-prinf] b:nth-child(2):after { content:"/hr"; }
 

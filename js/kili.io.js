@@ -35,7 +35,7 @@ function swapCurr() {
         i = 0;
 
     for (i = 0; i < prices.length; i++) {
-        prices[i].innerHTML = ((USD ? EXCHANGE_RATE : 1 / EXCHANGE_RATE) * parseFloat(prices[i].innerHTML.replace(/,/g , ''))).formatMoney(2);   
+        prices[i].innerHTML = (((USD ? EXCHANGE_RATE : 1 / EXCHANGE_RATE) * parseFloat(prices[i].innerHTML.replace(/,/g , ''))).formatMoney(2)).replace(".00","");   
     }
     
     $("#pricing")[0].dataset.currency = USD ? "KES" : "USD";
