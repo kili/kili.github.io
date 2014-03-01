@@ -1,4 +1,4 @@
-function scrollToA(target) { console.log("qwert"); $('html').animate({ scrollTop: $(target).offset().top }, 1000); return true; }
+function scrollToA(target) { $('html').animate({ scrollTop: $(target).offset().top }, 1000); return true; }
 
 var EXCHANGE_RATE = 86;
 
