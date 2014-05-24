@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Kili - SLA</title>
+	<meta name="description" content="Kili Terms of Service">
+</head>
+<body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44382219-1', 'kili.io');
+  ga('send', 'pageview');
+</script>
+
+<h1>Kili Service Level Agreement</h1>
+Effective Date: June 1, 2013
+<p>
+This Service Level Agreement ("SLA") policy governs the use of the Kili Cloud under the <a href="terms">Terms of Agreement (the "Kili Agreement")</a> between Kili.io, Inc. ("Kili", "us" or "we") and users of Kili's services ("you"). This SLA applies separately to each account using the Kili Cloud. Unless otherwise provided herein, this SLA is subject to the <a href="terms">Kili Agreement</a> and capitalized terms will have the meaning specified in the Agreement. We reserve the right to change the terms of this SLA in accordance with the Agreement.
+</p>
+
+<h2>Service Commitment</h2>
+<p>
+Kili will use commercially reasonable efforts to make the Kili Cloud available with a Monthly Uptime Percentage (defined below) of at least 99.95%, in each case during any monthly billing cycle (the "Service Commitment"). In the event that Kili does not meet the Service Commitment, you will be eligible to receive a Service Credit as described below.
+</p>
+
+<h2>Definitions</h2>
+<ul>
+<li>"Monthly Uptime Percentage" is calculated by subtracting from 100% the percentage of minutes during the month in which the Kili Cloud was in the state of "Region Unavailable." Monthly Uptime Percentage measurements exclude downtime resulting directly or indirectly from any Kili SLA Exclusion (defined below).</li>
+<li>"Region Unavailable" and "Region Unavailability" mean that more than one Availability Zone in which you are running an instance, within the same Region, is "Unavailable" to you.</li>
+<li>"Unavailable" and "Unavailability" mean:
+    <ul>
+        <li>your running instances have no external connectivity.</li>
+        <li>your attached volumes perform zero read write IO, with pending IO in the queue.</li>
+    </ul>
+</li>
+<li>A "Service Credit" is a dollar credit, calculated as set forth below, that we may credit back to an eligible account.</li>
+</ul>
+
+<h2>Service Commitments and Service Credits</h2>
+<p>
+Service Credits are calculated as a percentage of the total charges paid by you (excluding one-time payments such as upfront payments made for Reserved Instances) in the Region affected for the monthly billing cycle in which the Region Unavailability occurred in accordance with the schedule below.
+                                
+<table border=1>
+    <tr><td>Monthly Uptime Percentage</td><td align="right">Service Credit Percentage</td></tr>
+    <tr><td>Less than 99.95% but equal to or greater than 99.0%</td><td align="right">10%</td></tr>
+    <tr><td>Less than 99.0%</td><td align="right">30%</td></tr>
+</table>
+
+<p> We will apply any Service Credits only against future payments otherwise due from you. At our discretion, we may issue the Service Credit to the credit card you used to pay for the billing cycle in which the Unavailability occurred. Service Credits will not entitle you to any refund or other payment from Kili. A Service Credit will be applicable and issued only if the credit amount for the applicable monthly billing cycle is greater than one dollar ($1 USD). Service Credits may not be transferred or applied to any other account. Unless otherwise provided in the <a href="terms">Kili Agreement</a>, your sole and exclusive remedy for any unavailability, non-performance, or other failure by us to provide the Kili Cloud is the receipt of a Service Credit (if eligible) in accordance with the terms of this SLA.</p>
+
+
+<h2>Credit Request and Payment Procedures</h2>
+<p>To receive a Service Credit, you must submit a claim by opening a case in the Support Center. To be eligible, the credit request must be received by us by the end of the second billing cycle after which the incident occurred and must include:-</p>
+<ol>
+    <li>the words "SLA Credit Request" in the subject line;</li>
+    <li>the dates and times of each Unavailability incident that you are claiming;</li>
+    <li>the affected instance IDs or the affected volume IDs; and</li>
+    <li>your request logs that document the errors and corroborate your claimed outage (any confidential or sensitive information in these logs should be removed or replaced with asterisks).</li>
+</ol>
+
+<p>If the Monthly Uptime Percentage of such request is confirmed by us and is less than the Service Commitment, then we will issue the Service Credit to you within one billing cycle following the month in which your request is confirmed by us. Your failure to provide the request and other information as required above will disqualify you from receiving a Service Credit.</p>
+
+<h2>SLA Exclusions</h2>
+<p>The Service Commitment does not apply to any unavailability, suspension or termination of the Kili Cloud, or any other performance issues: (i) that result from a suspension described in Section 6.1 of the <a href="terms">Kili Agreement</a>; (ii) caused by factors outside of our reasonable control, including any force majeure event or Internet access or related problems beyond the demarcation point of the Kili Cloud; (iii) that result from any actions or inactions of you or any third party, including failure to acknowledge a recovery volume; (iv) that result from your equipment, software or other technology and/or third party equipment, software or other technology (other than third party equipment within our direct control); (v) that result from failures of individual instances or volumes not attributable to Region Unavailability; (vi) that result from any maintenance as provided for pursuant to the Kili Agreement; or (vii) arising from our suspension and termination of your right to use the Kili Cloud in accordance with the Kili Agreement (collectively, the "Kili SLA Exclusions"). If availability is impacted by factors other than those used in our Monthly Uptime Percentage calculation, then we may issue a Service Credit considering such factors at our discretion.
+</p>
+</body>
+</html>
