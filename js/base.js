@@ -42,4 +42,5 @@ $(document).ready(function() {
     scrollHere('#features-nav', '#features')
     scrollHere('#pricing-nav', '#pricing')
     scrollHere('#cta-nav', '#cta')
+    scrollHere('#team-nav', '#team')
 });
