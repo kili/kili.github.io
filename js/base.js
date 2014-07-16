@@ -19,7 +19,6 @@ function swapCurr() {
 
 $("#currSwitch > b > a").on("click", function(e){ swapCurr(); });
 
-swapCurr();
 $(document).ready(function() {
     $('.carousel').carousel({ interval: false });
     $("[rel=tooltip]").tooltip();
@@ -28,7 +27,7 @@ $(document).ready(function() {
             $(this).tab('show');
         });
 
-        $('.toggle').toggles({text:{on:'USD', off:'KES'}, width:110, height:40 , type:'select'});
+        $('.toggle').toggles({text:{on:'KES', off:'USD'}, width:110, height:40 , type:'select'});
         $('.toggle').on('toggle', function (e, active) { swapCurr(); 
     });
 
@@ -43,4 +42,5 @@ $(document).ready(function() {
     scrollHere('#pricing-nav', '#pricing')
     scrollHere('#cta-nav', '#cta')
     scrollHere('#team-nav', '#team')
+    $('.toggle').click()
 });
