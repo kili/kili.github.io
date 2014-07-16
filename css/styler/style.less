@@ -2,9 +2,9 @@
 @font-normal : 'Roboto', Helvetica,sans-serif;
 
 @import "colorful.less";
-@import "kili.io.less";
 @import "toggles.less";
 @import "toggles-light.less";
+@import "kili.io.less";
 
 .aligncenter	{text-align: center}
 .alignleft		{text-align: left}
@@ -87,37 +87,52 @@ body {
 	}
 
 	.navbar {
-        -o-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
-        -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
-        -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .2);
+        background-color: #fff;
+		border-bottom: rgba(255, 255, 255, 0.2) solid 1px;
+        padding: 15px 0;
 
-		.navbar-inner {
+		.container {
 			background: #fff;
 			border-bottom: none;
 			box-shadow: none;
-			padding:15px 0;
 
 			#branding {
+                color: #3E4956;
+                font-family: 'Oxygen', Helvetica, sans-serif;
+                font-weight: 700;
 				margin:0;
 				font-size: 30px;
 				line-height: 1;
+                padding-top: 5px;
+                padding-bottom: 5px;
 			}
 
 			ul.nav {
 				margin-bottom: 0;
-				li {
-					a {
+				> li {
+					> a {
 						color: #333;
 						font-weight: 600;
+                        padding: 10px 10px;
 						text-transform: uppercase;
 						text-shadow:none;
-                        cursor:pointer;
 						&:hover {
 							text-decoration: underline;
 						}
+
+                        &.btn {
+                            color: #fff;
+                            font-size: 12px;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                        }
 					}
 				}
+                &.navbar-right {
+                    > li {
+                        margin-left: 10px;
+                    }
+                }
 			}
 		}
 	}
@@ -133,6 +148,8 @@ body {
 
 
 .featured {
+    background: transparent url('../../img/featured.jpg') no-repeat top center fixed;
+    background-size: cover;
 	padding-bottom: 0;
 
 	.intro {
@@ -145,6 +162,10 @@ body {
 			font-weight: 400;
 		}
 	}
+    .screenshot {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .features {
@@ -221,7 +242,6 @@ body {
 
 	&.tabbable {
 		ul.nav-tabs {
-			margin-right: 30px;
 			border:0;
 			li {
 				a {
@@ -256,6 +276,9 @@ body {
 					}
 				}
 			}
+            &.nav-stacked > li + li {
+                margin-top: 0;
+            }
 		}
 	}
 
@@ -279,22 +302,31 @@ body {
 	}
 }
 
+.cta {
+    .page-header {
+        border: 0;
+        margin: 0;
+        padding: 0 15px;
+    }
+}
+
 .pricing {
 	ul.pricing-list {
 		&.pricing1 {
 			padding: 20px 0;
 			> li {
-				margin-bottom: 30px;
-				background: #fff;
-				border-radius: 3px;
-				color: #555;
-
+    			margin-bottom: 30px;	
+                > div {
+                    background: #fff;
+                    border-radius: 3px;
+                    color: #555;    
+                }
 				.pricing-title {
 					padding: 10px 20px;
 					h1,h2,h3,h4,h5,h6 {color: #333;}
 				}
 				.pricing-price {
-					/*padding: 10px 20px;*/
+					padding: 10px 20px;
 
 					.pricing-price-container {
 						display: inline-block;
@@ -312,7 +344,7 @@ body {
 					}
 				}
 				.pricing-features {
-					padding: 20px 0;
+					padding: 20px;
 					color: rgba(0,0,0,0.5);
 				}
 				.pricing-action {
@@ -332,7 +364,7 @@ body {
 							height: 150px;
 							line-height: 150px;
 							border-radius: 150px;
-							font-size: 30px;
+							font-style: 30px;
 							span {
 								font-size: 18px;
 							}
@@ -389,9 +421,11 @@ body {
 	&.custom2 {
 		padding:0 40px;
 		.carousel-indicators {
+            margin-left: 0;
 			position: relative;
 			right:auto;
 			left:auto;
+            width: 100%;
 			&:before {
 				content:'';
 				display: block;
@@ -405,10 +439,20 @@ body {
 				z-index: -1;
 			}
 			li {
+                border: 0;
 				text-indent: 0;
 				height: auto;
 				background: none;
 				cursor:pointer;
+                &.col-md-4 {
+                    width: 32.3333%;
+                }
+                &.col-md-3 {
+                    width: 25%;
+                }
+                &.col-md-2 {
+                    width: 16.666666666666664%;
+                }
 				.round {
 					height: 40px;
 					width: 40px;
@@ -478,7 +522,7 @@ body {
 	}
 }
 
-.testimonial, .team {
+.testimonial, .team  {
 	blockquote {
 		font-size: 18px;
 		line-height: 1.4;
@@ -530,17 +574,34 @@ body {
 	&.testimonial-list2, &.team-list2 {
 		padding:0 40px;
 		.carousel-indicators {
+            margin-left: 0;
 			position: relative;
 			right:auto;
 			left:auto;
 			top:0;
+            width: auto;
+            &:before, &:after {
+                content: "";
+                display: table;
+            }
 			li {
+                border: 0;
 				text-indent: 0;
 				height: auto;
 				background: none;
 				cursor:pointer;
 				opacity: 0.5;
 				filter: alpha(opacity=60);
+                margin: 0;
+                &.col-md-4 {
+                    width: 30.623932%;
+                }
+                &.col-md-3 {
+                    width: 23.076923076923077%;
+                }
+                &.col-md-2 {
+                    width: 14.52991452991453%;
+                }
 				.thumbnail {
 					display: inline-block;
 					margin:0 auto 10px;
@@ -643,6 +704,65 @@ body {
 	}
 }
 
+.profile {
+    .profile-detail {
+        h2, h3 {
+            margin-top: 0;
+        }
+    }
+    .profile-avatar {
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+    }
+    .social-network {
+        li {
+            a {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+.articles {
+    .article-heading {
+        background: transparent url('../../img/featured.jpg') no-repeat center center;
+        background-size: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 60px 0 0;
+        h2 {
+            background: rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+            margin: 0;
+            padding: 20px 15px 0;
+        }
+        a {
+            color: #fff;
+        }
+        p {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0 0 10px 10px;
+            color: #fff;
+            padding: 0 15px 15px;
+        }
+    }
+    hr {
+        border-color: #ddd;
+        margin: 50px 0;
+    }
+}
+
+.error-code {
+    font-size: 1300%;
+}
+
+.row-demo {
+    margin-bottom: 20px;
+}
+
 /*-------------------------------------------------------------------------*/
 /* Large desktop */
 /*-------------------------------------------------------------------------*/
@@ -665,7 +785,7 @@ body {
 		blockquote {
 			font-size: 20px;
 		}
-		.testimonial-list1, .team-list1 {
+		.testimonial-list1, .team-list {
 			.desc {
 				.thumbnail {
 					img {
@@ -685,21 +805,11 @@ body {
 	}
 }
 
-/*-------------------------------------------------------------------------*/
-/* CURRFIT */
-/*-------------------------------------------------------------------------*/
-@media (min-width:980px) and (max-width:1200px) {
-    .pricing {
-        .container{
-           width: 1000px !important;
-           ul.pricing-list {
-               &.pricing1 {
-                   > li {
-                       margin:0 0 15px 15px;
-                       width:240px;
-                   }
-               }
-           }
+
+@media (max-width: 979px) {
+    .profile {
+        .profile-detail, .profile-avatar {
+            text-align: center;
         }
     }
 }
@@ -742,15 +852,6 @@ body {
 		background-position: center;
 	}
 	
-    .pricing {
-        ul.pricing-list {
-            &.pricing1 {
-                > li {
-                    min-height:392px;
-                }
-            }
-        }
-    }
 }
 /*-------------------------------------------------------------------------*/
 /* Landscape phone to portrait tablet */
@@ -797,7 +898,6 @@ body {
 		background-size: auto;
 		background-position: center;
 	}
-	
 }
 /*-------------------------------------------------------------------------*/
 /* Landscape phones and down */
@@ -862,7 +962,7 @@ body {
 						padding:10px;
 					}
 					.pricing-title  {
-						margin-left: 190px;
+						margin-left: 140px;
 						text-align: left;
 						padding:15px 10px 0;
 						h3 {
@@ -870,7 +970,7 @@ body {
 						}
 					}
 					.pricing-features {
-						margin-left: 190px;
+						margin-left: 140px;
 						padding:10px;
 						text-align: left;
 					}
@@ -886,9 +986,9 @@ body {
 						margin-top: 0;
 						.pricing-price {
 							.pricing-price-container {
-								width:160px;
-								height: 160px;
-								line-height: 160px;
+								width:110px;
+								height: 110px;
+								line-height: 110px;
 							}
 						}
 					}
