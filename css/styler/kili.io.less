@@ -25,10 +25,10 @@ h1, h2, h3, h4, h5, h6{ font-weight: bold !important; }
 }
 
 /*currency styles*/
-[data-prinf] b{white-space:nowrap;}
-[data-currency="KES"] [data-prinf] b:before { content:"KES "; }
-[data-currency="USD"] [data-prinf] b:before { content:"$"; }
-[data-prinf] b:nth-child(2):after { content:"/hr"; }
+[data-price-info] b{white-space:nowrap;}
+[data-currency="KES"] [data-price-info] b:before { content:"KES "; }
+[data-currency="USD"] [data-price-info] b:before { content:"$"; }
+[data-price-info] b:nth-child(2):after { content:"/hr"; }
 
 .service-title{
     & > hr { margin-bottom: 0; }
@@ -47,3 +47,17 @@ h1, h2, h3, h4, h5, h6{ font-weight: bold !important; }
     }
 }
 
+#mainnav{
+    .drop-down{
+        background:white;
+        position:absolute;
+        overflow:hidden;
+        max-height:0px;
+        transition:max-height 1s; 
+    }
+    li > ul > li{ min-width:200px; }
+    li > ul > li > a:hover{ background:none  }
+    li:hover > .drop-down{
+        max-height:1000px;
+    }
+}
