@@ -1,13 +1,8 @@
-function scrollToA(target) { 
-    $('html, body').animate({ scrollTop: $(target).offset().top }, 1000); 
-    return true; 
-}
-
 var EXCHANGE_RATE = 86;
 
 function swapCurr() {
     var USD = $("#pricing")[0].dataset.currency === "USD",
-        prices = $("[data-prinf] b"),
+        prices = $("[data-price-info] b"),
         i = 0;
 
     for (i = 0; i < prices.length; i++) {
@@ -31,16 +26,5 @@ $(document).ready(function() {
         $('.toggle').on('toggle', function (e, active) { swapCurr(); 
     });
 
-    // navigation scrolling
-    function scrollHere(target, end){
-        $(target).on('click', function(e){
-            e.preventDefault();
-            $.scrollTo( $(end).offset().top-69, 600)
-        })
-    }
-    scrollHere('#features-nav', '#features')
-    scrollHere('#pricing-nav', '#pricing')
-    scrollHere('#cta-nav', '#cta')
-    scrollHere('#team-nav', '#team')
     $('.toggle').click()
 });
