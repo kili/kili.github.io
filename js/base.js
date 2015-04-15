@@ -1,4 +1,4 @@
-var EXCHANGE_RATE = 86;
+var EXCHANGE_RATE = 94;
 
 function swapCurr() {
     var USD = $("#pricing")[0].dataset.currency === "USD",
